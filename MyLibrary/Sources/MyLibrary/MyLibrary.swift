@@ -28,7 +28,7 @@ public class MyLibrary {
                 if self.contains(temperature, "8") {
                     completion(true)
                 } else {
-                    let isLuckyNumber = self.contains(temperature, "8")
+                    let isLuckyNumber = self.contains(temperature, "8")//hello
                     completion(isLuckyNumber)
                 }
             }
