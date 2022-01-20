@@ -5,7 +5,7 @@ public protocol WeatherService {
 }
 
 class WeatherServiceImpl: WeatherService {
-    let url = "https://api.openweathermap.org/data/2.5/weather?q=corvallis&units=imperial&appid=<INSERT YOUR API KEY HERE>"
+    let url = "http://localhost:3000/data/2.5/weather"
 
     func getTemperature(completion: @escaping (_ response: Result<Int /* Temperature */, Error>) -> Void) {
         AF.request(url, method: .get).validate(statusCode: 200..<300).responseDecodable(of: Weather.self) { response in
